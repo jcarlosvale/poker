@@ -16,13 +16,20 @@ as $$
     --pot of hand
     declare totalPot int;
 
+    --player position
+    declare positionOf int;
+    declare stackOf int;
+
     begin
         if (new.section = 'HEADER') then
             --nickname
             if (new.line like '%Seat %:%in chips%') then
                 nicknameOfPlayer = trim(substring(new.line from 'Seat [0-9]*:(.*)\([0-9]* in chips'));
 
-                INSERT INTO players(nickname, created_at) values (nicknameOfPlayer, now()) ON CONFLICT (nickname) do nothing;
+                INSERT INTO players(nickname, created_at)
+                values (nicknameOfPlayer, now())
+                ON CONFLICT (nickname)
+                do nothing;
 
             end if;
 
@@ -36,23 +43,47 @@ as $$
 
                 INSERT INTO hands(hand_id, table_id, level_tournament, small_blind, big_blind, created_at, played_at, tournament_id)
                 VALUES(new.hand_id, new.table_id, levelOf, smallBlind, bigBlind, now(), playedAt, new.tournament_id)
-                ON CONFLICT (hand_id) do nothing;
+                ON CONFLICT (hand_id)
+                do nothing;
+
+            end if;
+
+            --player position
+            if (new.line like '%Seat %:%in chips%') then
+
+                nicknameOfPlayer = trim(substring(new.line from 'Seat [0-9]*:(.*)\([0-9]* in chips'));
+                positionOf = cast(trim(substring(new.line from 'Seat ([0-9]*):')) as int);
+                stackOf = cast(trim(substring(new.line from '\(([0-9]*) in chips')) as int);
+
+                INSERT INTO player_position(hand_id, nickname, position, stack)
+                VALUES(new.hand_id, nicknameOfPlayer, positionOf, stackOf)
+                on conflict (hand_id, position)
+                do nothing;
 
             end if;
         end if;
+
+
         if (new.section = 'SUMMARY') then
             --board
             if (new.line like '%Board [%]%') then
                 boardOf = substring(new.line from 'Board \[(.*)\]');
 
-                INSERT INTO board_of_hand(hand_id, board) VALUES(new.hand_id, boardOf) on conflict(hand_id) do nothing;
+                INSERT INTO board_of_hand(hand_id, board)
+                VALUES(new.hand_id, boardOf)
+                on conflict(hand_id) do nothing;
+
             end if;
 
             --pot of hand
             if (new.line like '%Total pot%') then
                 totalPot = cast(substring(new.line from 'Total pot ([0-9]*)')  as int);
 
-                INSERT INTO pot_of_hand (hand_id, total_pot) VALUES(new.hand_id, totalPot) on conflict(hand_id) do nothing;
+                INSERT INTO pot_of_hand (hand_id, total_pot)
+                VALUES(new.hand_id, totalPot)
+                on conflict(hand_id)
+                do nothing;
+
             end if;
         end if;
 

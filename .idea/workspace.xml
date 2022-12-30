@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d3d2313-248a-48e7-9b03-ec8a2574b69d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/importer/src/main/SQL/5-pot_of_hand.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/importer/src/main/SQL/6-player_position.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/98-selects.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/98-selects.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/99-truncate.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/99-truncate.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/procedureInsertPlayers.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/procedureInsertPlayers.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +71,8 @@
       "postgresql"
     ],
     "RunConfigurationTargetLRU": [
-      "add8449e-e57c-4fa2-9e65-a5a0b9a7f9e8/database/\"poker\""
+      "add8449e-e57c-4fa2-9e65-a5a0b9a7f9e8/database/\"poker\"",
+      "add8449e-e57c-4fa2-9e65-a5a0b9a7f9e8"
     ]
   }
 }]]></component>
@@ -85,7 +88,7 @@
       <recent name="com.poker.importer.model" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.Main">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.poker.importer.Main" />
       <module name="importer" />
@@ -98,6 +101,12 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="6-player_position.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/importer/src/main/SQL/6-player_position.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="add8449e-e57c-4fa2-9e65-a5a0b9a7f9e8" />
+      <method v="2" />
     </configuration>
     <configuration name="tr_insertPokerLine.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
       <script-file value="$PROJECT_DIR$/importer/src/main/SQL/tr_insertPokerLine.sql" />
@@ -121,8 +130,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Database Script.tr_insertPokerLine.sql" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Database Script.6-player_position.sql" />
+        <item itemvalue="Database Script.tr_insertPokerLine.sql" />
       </list>
     </recent_temporary>
   </component>
@@ -135,7 +145,7 @@
       <option name="presentableId" value="Default" />
       <updated>1672350295269</updated>
       <workItem from="1672350296959" duration="71000" />
-      <workItem from="1672350371996" duration="36300000" />
+      <workItem from="1672350371996" duration="38412000" />
     </task>
     <task id="LOCAL-00001" summary="initial push">
       <created>1672416771481</created>
@@ -158,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672436753047</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="pot of hand">
+      <created>1672438036301</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1672438036301</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,7 +185,8 @@
     <MESSAGE value="initial push" />
     <MESSAGE value="initial scripts" />
     <MESSAGE value="board" />
-    <option name="LAST_COMMIT_MESSAGE" value="board" />
+    <MESSAGE value="pot of hand" />
+    <option name="LAST_COMMIT_MESSAGE" value="pot of hand" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -197,6 +215,11 @@
           <url>file://$PROJECT_DIR$/../pokerReader/src/main/java/com/poker/reader/domain/service/FileProcessorService.java</url>
           <line>42</line>
           <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../pokerReader/src/main/java/com/poker/reader/domain/service/FileProcessorService.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

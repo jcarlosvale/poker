@@ -5,22 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d3d2313-248a-48e7-9b03-ec8a2574b69d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/importer/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/importer/src/main/SQL/pokerline.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/importer/src/main/java/com/poker/importer/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/importer/src/main/java/com/poker/importer/model/FileSection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/importer/src/main/java/com/poker/importer/model/PokerLine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/importer/src/main/java/com/poker/importer/model/PokerLineId.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/importer/src/main/java/com/poker/importer/repository/PokerLineRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/importer/src/main/java/com/poker/importer/service/FileImportService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/importer/src/main/resources/application.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/importer/src/main/SQL/1-player.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/importer/src/main/SQL/2-tournament.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/importer/src/main/SQL/3-hands.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/importer/src/main/SQL/98-selects.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/importer/src/main/SQL/99-truncate.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/importer/src/main/SQL/procedureInsertPlayers.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/importer/src/main/SQL/tr_insertPokerLine.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/importer/src/main/java/com/poker/importer/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/java/com/poker/importer/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,11 +65,20 @@
     "jdk.selected.JAVA_MODULE": "18",
     "last_directory_selection": "C:/Projects/Poker/importer/src/main/java",
     "last_opened_file_path": "C:/Projects/Poker/importer/src/main/resources",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "editor.preferences.import",
     "spring.configuration.checksum": "1de9b0a30075ae8c303eb420c103c320"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ],
+    "RunConfigurationTargetLRU": [
+      "add8449e-e57c-4fa2-9e65-a5a0b9a7f9e8/database/\"poker\""
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -103,6 +107,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="tr_insertPokerLine.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/importer/src/main/SQL/tr_insertPokerLine.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="add8449e-e57c-4fa2-9e65-a5a0b9a7f9e8" namespace="database/&quot;poker&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="importer" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.poker.importer.Main" />
@@ -119,6 +129,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Database Script.tr_insertPokerLine.sql" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -132,12 +143,24 @@
       <option name="presentableId" value="Default" />
       <updated>1672350295269</updated>
       <workItem from="1672350296959" duration="71000" />
-      <workItem from="1672350371996" duration="21151000" />
+      <workItem from="1672350371996" duration="33536000" />
     </task>
+    <task id="LOCAL-00001" summary="initial push">
+      <created>1672416771481</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1672416771481</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial push" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial push" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -146,6 +169,16 @@
           <url>file://$PROJECT_DIR$/importer/src/main/java/com/poker/importer/service/FileImportService.java</url>
           <line>47</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../pokerReader/src/main/java/com/poker/reader/domain/service/FileProcessorService.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../pokerReader/src/main/java/com/poker/reader/domain/service/FileProcessorService.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

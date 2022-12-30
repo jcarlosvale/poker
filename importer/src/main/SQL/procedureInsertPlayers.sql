@@ -1,12 +1,17 @@
 create or replace function insertPlayer() returns trigger
 language plpgsql
 as $$
+    --player
     declare nicknameOfPlayer varchar;
 
+    --hand
     declare levelOf varchar(20);
     declare smallBlind int;
     declare bigBlind int;
     declare playedAt timestamp;
+
+    --board
+    declare boardOf varchar;
 
     begin
         if (new.section = 'HEADER') then
@@ -17,6 +22,7 @@ as $$
                 INSERT INTO players(nickname, created_at) values (nicknameOfPlayer, now()) ON CONFLICT (nickname) do nothing;
 
             end if;
+
             --hands
             if (new.line like '%PokerStars Hand #%') then
 
@@ -30,6 +36,15 @@ as $$
                 ON CONFLICT (hand_id) do nothing;
 
             end if;
+        end if;
+        if (new.section = 'SUMMARY') then
+            --board
+            if (new.line like '%Board [%]%') then
+                boardOf = substring(new.line from 'Board \[(.*)\]');
+
+                INSERT INTO board_of_hand(hand_id, board) VALUES(new.hand_id, boardOf) on conflict(hand_id) do nothing;
+            end if;
+
         end if;
 
         --tournament id

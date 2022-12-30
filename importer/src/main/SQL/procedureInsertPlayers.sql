@@ -13,6 +13,9 @@ as $$
     --board
     declare boardOf varchar;
 
+    --pot of hand
+    declare totalPot int;
+
     begin
         if (new.section = 'HEADER') then
             --nickname
@@ -45,6 +48,12 @@ as $$
                 INSERT INTO board_of_hand(hand_id, board) VALUES(new.hand_id, boardOf) on conflict(hand_id) do nothing;
             end if;
 
+            --pot of hand
+            if (new.line like '%Total pot%') then
+                totalPot = cast(substring(new.line from 'Total pot ([0-9]*)')  as int);
+
+                INSERT INTO pot_of_hand (hand_id, total_pot) VALUES(new.hand_id, totalPot) on conflict(hand_id) do nothing;
+            end if;
         end if;
 
         --tournament id

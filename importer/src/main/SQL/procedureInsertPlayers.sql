@@ -20,6 +20,9 @@ as $$
     declare positionOf int;
     declare stackOf int;
 
+    --cards of player
+    declare cardsOfPlayer varchar;
+
     begin
         if (new.section = 'HEADER') then
             --nickname
@@ -85,6 +88,29 @@ as $$
                 do nothing;
 
             end if;
+
+            --cards of player
+            if (new.line like '%Seat %:%') and (new.line like '%mucked [%' or new.line like '%showed [%') then
+
+                positionOf = cast(substring(new.line from 'Seat ([0-9]*):') as int);
+                cardsOfPlayer = null;
+
+                if position('mucked [' in new.line) > 0 then
+                    cardsOfPlayer = substring(new.line from 'mucked \[(.{5})\]');
+                end if;
+                if position('showed [' in new.line) > 0 then
+                    cardsOfPlayer = substring(new.line from 'showed \[(.{5})\]');
+                end if;
+
+
+                INSERT INTO cards_of_player(position, description, hand_id)
+                VALUES(positionOf, cardsOfPlayer, new.hand_id)
+                on conflict (hand_id, position)
+                do nothing;
+
+            end if;
+
+
         end if;
 
         --tournament id

@@ -5,11 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d3d2313-248a-48e7-9b03-ec8a2574b69d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/importer/src/main/SQL/6-player_position.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/importer/src/main/SQL/7-card.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/importer/src/main/SQL/8-cards_of_player.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/importer/src/main/java/com/poker/importer/model/Cards.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/importer/src/main/java/com/poker/importer/repository/CardsRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/importer/src/main/java/com/poker/importer/util/CardUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/importer/src/main/java/com/poker/importer/util/CardsGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/importer/src/main/java/com/poker/importer/util/Chen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/98-selects.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/98-selects.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/99-truncate.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/99-truncate.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/procedureInsertPlayers.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/procedureInsertPlayers.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/importer/src/main/java/com/poker/importer/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/java/com/poker/importer/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,10 +92,25 @@
       <recent name="C:\Projects\Poker\importer\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.poker.importer.repository" />
+      <recent name="com.poker.importer.util" />
       <recent name="com.poker.importer.model" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
+    <configuration name="CardsGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.poker.reader.domain.util.CardsGenerator" />
+      <module name="reader" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.poker.reader.domain.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.poker.importer.Main" />
       <module name="importer" />
@@ -131,6 +153,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.CardsGenerator" />
         <item itemvalue="Database Script.6-player_position.sql" />
         <item itemvalue="Database Script.tr_insertPokerLine.sql" />
       </list>
@@ -145,7 +168,7 @@
       <option name="presentableId" value="Default" />
       <updated>1672350295269</updated>
       <workItem from="1672350296959" duration="71000" />
-      <workItem from="1672350371996" duration="38412000" />
+      <workItem from="1672350371996" duration="42428000" />
     </task>
     <task id="LOCAL-00001" summary="initial push">
       <created>1672416771481</created>
@@ -175,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672438036301</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="player position">
+      <created>1672440049143</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1672440049143</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,7 +216,8 @@
     <MESSAGE value="initial scripts" />
     <MESSAGE value="board" />
     <MESSAGE value="pot of hand" />
-    <option name="LAST_COMMIT_MESSAGE" value="pot of hand" />
+    <MESSAGE value="player position" />
+    <option name="LAST_COMMIT_MESSAGE" value="player position" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -220,6 +251,11 @@
           <url>file://$PROJECT_DIR$/../pokerReader/src/main/java/com/poker/reader/domain/service/FileProcessorService.java</url>
           <line>47</line>
           <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../pokerReader/src/main/java/com/poker/reader/domain/service/FileProcessorService.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

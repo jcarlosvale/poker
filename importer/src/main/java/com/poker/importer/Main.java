@@ -1,6 +1,8 @@
 package com.poker.importer;
 
+import com.poker.importer.repository.CardsRepository;
 import com.poker.importer.service.FileImportService;
+import com.poker.importer.util.CardsGenerator;
 import lombok.AllArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -13,6 +15,7 @@ import java.io.IOException;
 public class Main implements CommandLineRunner {
 
     private final FileImportService service;
+    private final CardsRepository cardsRepository;
 
     public static void main(String[] args) throws IOException {
         SpringApplication.run(Main.class, args);
@@ -24,6 +27,10 @@ public class Main implements CommandLineRunner {
         String folder = "C:\\temp";
         if (args.length > 0) {
             folder = args[0];
+        }
+
+        if (cardsRepository.count() == 0) {
+                cardsRepository.saveAll(CardsGenerator.generateCards());
         }
 
         service.importFiles(folder);

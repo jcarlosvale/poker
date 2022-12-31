@@ -30,6 +30,11 @@ as $$
     declare noBet bool;
     declare roundOf varchar;
 
+    --win position
+    declare showDownOf bool;
+    declare potOf int;
+    declare handDescription varchar;
+
 
     begin
         if (new.section = 'HEADER') then
@@ -175,6 +180,34 @@ as $$
                     do nothing;
 
                 end if;
+
+                -- win_position
+                if (new.line like '%collected%' or  new.line like '%and won %') then
+
+                    positionOf = cast(substring(new.line from 'Seat ([0-9]*):') as int);
+                    showDownOf = null;
+                    potOf = null;
+                    handDescription = null;
+
+                    if strpos(new.line, 'collected') > 0 then
+                        showDownOf = false;
+                        potOf = cast(substring(new.line from 'collected \(([0-9]*)\)') as int);
+                    end if;
+                    if (strpos(new.line, 'and won ' ) > 0) then
+                        showDownOf = true;
+                        potOf = cast(substring(new.line from 'and won \(([0-9]*)\)') as int);
+                        handDescription = trim(substring(new.line from '\) with (.*)'));
+                    end if;
+
+                    INSERT INTO win_position(hand_id, position, showdown, pot, hand_description)
+                    VALUES(new.hand_id, positionOf, showDownOf, potOf, handDescription)
+                    on conflict(hand_id, position)
+                    do nothing;
+
+                end if;
+
+
+
             end if;
         end if;
 

@@ -7,3 +7,4 @@ select * from player_position;
 select * from cards_of_player;
 select * from blind_position;
 select * from fold_position;
+select * from win_position;

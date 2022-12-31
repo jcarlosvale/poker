@@ -26,6 +26,11 @@ as $$
     --blind_position
     declare placeOf varchar(20);
 
+    --fold_position
+    declare noBet bool;
+    declare roundOf varchar;
+
+
     begin
         if (new.section = 'HEADER') then
             --nickname
@@ -134,6 +139,38 @@ as $$
 
                     INSERT INTO blind_position(hand_id, position, place)
                     VALUES(new.hand_id, positionOf, placeOf)
+                    on conflict(hand_id, position)
+                    do nothing;
+
+                end if;
+
+                --fold position
+                if (new.line like '%folded before Flop%' or new.line like '%folded on the Flop%' or
+                    new.line like '%folded on the Turn%' or new.line like '%folded on the River%') then
+
+                    positionOf = cast(substring(new.line from 'Seat ([0-9]*):') as int);
+                    roundOf = null;
+                    noBet = false;
+
+                    if strpos(new.line, 'folded before Flop')  > 0 then
+                        roundOf = 'PREFLOP';
+                    end if;
+                    if strpos(new.line, 'folded on the Flop') then
+                        roundOf = 'FLOP';
+                    end if;
+                    if strpos(new.line, 'folded on the Turn')  > 0 then
+                        roundOf = 'TURN';
+                    end if;
+                    if strpos(new.line, 'folded on the River') > 0 then
+                        roundOf = 'RIVER';
+                    end if;
+
+                    if strpos(new.line, 'didn''t bet')  > 0 then
+                        noBet = true;
+                    end if;
+
+                    INSERT INTO fold_position(hand_id, position, round, no_bet)
+                    VALUES(new.hand_id, positionOf, roundOf, noBet)
                     on conflict(hand_id, position)
                     do nothing;
 

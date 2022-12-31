@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d3d2313-248a-48e7-9b03-ec8a2574b69d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/importer/src/main/SQL/9-blind_position.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/importer/src/main/SQL/10-fold_position.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/98-selects.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/98-selects.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/99-truncate.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/99-truncate.sql" afterDir="false" />
@@ -161,7 +161,7 @@
       <option name="presentableId" value="Default" />
       <updated>1672350295269</updated>
       <workItem from="1672350296959" duration="71000" />
-      <workItem from="1672350371996" duration="45434000" />
+      <workItem from="1672350371996" duration="48141000" />
     </task>
     <task id="LOCAL-00001" summary="initial push">
       <created>1672416771481</created>
@@ -205,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672444059164</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="blind position">
+      <created>1672447177970</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1672447177970</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,7 +225,8 @@
     <MESSAGE value="pot of hand" />
     <MESSAGE value="player position" />
     <MESSAGE value="cards of player" />
-    <option name="LAST_COMMIT_MESSAGE" value="cards of player" />
+    <MESSAGE value="blind position" />
+    <option name="LAST_COMMIT_MESSAGE" value="blind position" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -272,6 +280,11 @@
           <url>file://$PROJECT_DIR$/../pokerReader/src/main/java/com/poker/reader/domain/service/FileProcessorService.java</url>
           <line>62</line>
           <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../pokerReader/src/main/java/com/poker/reader/domain/service/FileProcessorService.java</url>
+          <line>67</line>
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

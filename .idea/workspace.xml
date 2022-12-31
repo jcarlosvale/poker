@@ -5,18 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d3d2313-248a-48e7-9b03-ec8a2574b69d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/importer/src/main/SQL/7-card.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/importer/src/main/SQL/8-cards_of_player.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/importer/src/main/java/com/poker/importer/model/Cards.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/importer/src/main/java/com/poker/importer/repository/CardsRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/importer/src/main/java/com/poker/importer/util/CardUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/importer/src/main/java/com/poker/importer/util/CardsGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/importer/src/main/java/com/poker/importer/util/Chen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/importer/src/main/SQL/9-blind_position.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/98-selects.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/98-selects.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/99-truncate.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/99-truncate.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/procedureInsertPlayers.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/procedureInsertPlayers.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/importer/src/main/java/com/poker/importer/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/java/com/poker/importer/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +161,7 @@
       <option name="presentableId" value="Default" />
       <updated>1672350295269</updated>
       <workItem from="1672350296959" duration="71000" />
-      <workItem from="1672350371996" duration="42428000" />
+      <workItem from="1672350371996" duration="45434000" />
     </task>
     <task id="LOCAL-00001" summary="initial push">
       <created>1672416771481</created>
@@ -205,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672440049143</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="cards of player">
+      <created>1672444059164</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1672444059164</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,7 +217,8 @@
     <MESSAGE value="board" />
     <MESSAGE value="pot of hand" />
     <MESSAGE value="player position" />
-    <option name="LAST_COMMIT_MESSAGE" value="player position" />
+    <MESSAGE value="cards of player" />
+    <option name="LAST_COMMIT_MESSAGE" value="cards of player" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -256,6 +257,21 @@
           <url>file://$PROJECT_DIR$/../pokerReader/src/main/java/com/poker/reader/domain/service/FileProcessorService.java</url>
           <line>52</line>
           <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../pokerReader/src/main/java/com/poker/reader/domain/service/FileProcessorService.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../pokerReader/src/main/java/com/poker/reader/domain/service/FileProcessorService.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../pokerReader/src/main/java/com/poker/reader/domain/service/FileProcessorService.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

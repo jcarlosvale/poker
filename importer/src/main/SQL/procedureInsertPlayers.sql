@@ -23,6 +23,9 @@ as $$
     --cards of player
     declare cardsOfPlayer varchar;
 
+    --blind_position
+    declare placeOf varchar(20);
+
     begin
         if (new.section = 'HEADER') then
             --nickname
@@ -90,27 +93,52 @@ as $$
             end if;
 
             --cards of player
-            if (new.line like '%Seat %:%') and (new.line like '%mucked [%' or new.line like '%showed [%') then
+            if (new.line like '%Seat %:%') then
 
-                positionOf = cast(substring(new.line from 'Seat ([0-9]*):') as int);
-                cardsOfPlayer = null;
+                --cards of player
+                if (new.line like '%mucked [%' or new.line like '%showed [%') then
 
-                if position('mucked [' in new.line) > 0 then
-                    cardsOfPlayer = substring(new.line from 'mucked \[(.{5})\]');
+                    positionOf = cast(substring(new.line from 'Seat ([0-9]*):') as int);
+                    cardsOfPlayer = null;
+
+                    if position('mucked [' in new.line) > 0 then
+                        cardsOfPlayer = substring(new.line from 'mucked \[(.{5})\]');
+                    end if;
+                    if position('showed [' in new.line) > 0 then
+                        cardsOfPlayer = substring(new.line from 'showed \[(.{5})\]');
+                    end if;
+
+
+                    INSERT INTO cards_of_player(position, description, hand_id)
+                    VALUES(positionOf, cardsOfPlayer, new.hand_id)
+                    on conflict (hand_id, position)
+                    do nothing;
+
                 end if;
-                if position('showed [' in new.line) > 0 then
-                    cardsOfPlayer = substring(new.line from 'showed \[(.{5})\]');
+
+                --blind_position
+                if (new.line like '%(button)%' or new.line like '%(small blind)%' or new.line like '%(big blind)%') then
+
+                    positionOf = cast(substring(new.line from 'Seat ([0-9]*):') as int);
+                    placeOf = null;
+
+                    if (strpos(new.line, '(button)') > 0) then
+                        placeOf = 'button';
+                    end if;
+                    if (strpos(new.line, '(small blind)') > 0) then
+                        placeOf =  'small blind';
+                    end if;
+                    if (strpos(new.line, '(big blind)') > 0) then
+                        placeOf =  'big blind';
+                    end if;
+
+                    INSERT INTO blind_position(hand_id, position, place)
+                    VALUES(new.hand_id, positionOf, placeOf)
+                    on conflict(hand_id, position)
+                    do nothing;
+
                 end if;
-
-
-                INSERT INTO cards_of_player(position, description, hand_id)
-                VALUES(positionOf, cardsOfPlayer, new.hand_id)
-                on conflict (hand_id, position)
-                do nothing;
-
             end if;
-
-
         end if;
 
         --tournament id

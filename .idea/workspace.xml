@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d3d2313-248a-48e7-9b03-ec8a2574b69d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/importer/src/main/SQL/11-win_position.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/98-selects.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/98-selects.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/99-truncate.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/99-truncate.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/procedureInsertPlayers.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/procedureInsertPlayers.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/procedureInsertPlayers.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/functionInsertData.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/tr_insertPokerLine.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/tr_insertPokerLine.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +62,7 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "editor.preferences.import",
-    "spring.configuration.checksum": "1de9b0a30075ae8c303eb420c103c320"
+    "spring.configuration.checksum": "c58af0bcf0233d7eccbedb9183d47ccb"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -161,7 +159,8 @@
       <option name="presentableId" value="Default" />
       <updated>1672350295269</updated>
       <workItem from="1672350296959" duration="71000" />
-      <workItem from="1672350371996" duration="50435000" />
+      <workItem from="1672350371996" duration="50967000" />
+      <workItem from="1672576174225" duration="1500000" />
     </task>
     <task id="LOCAL-00001" summary="initial push">
       <created>1672416771481</created>
@@ -219,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672449767350</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="win position">
+      <created>1672452254279</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1672452254279</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,7 +240,8 @@
     <MESSAGE value="cards of player" />
     <MESSAGE value="blind position" />
     <MESSAGE value="fold position" />
-    <option name="LAST_COMMIT_MESSAGE" value="fold position" />
+    <MESSAGE value="win position" />
+    <option name="LAST_COMMIT_MESSAGE" value="win position" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

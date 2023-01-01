@@ -1,4 +1,4 @@
-create or replace function insertPlayer() returns trigger
+create or replace function insertData() returns trigger
 language plpgsql
 as $$
     --player

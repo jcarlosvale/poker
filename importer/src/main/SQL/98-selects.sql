@@ -11,3 +11,4 @@ select * from win_position;
 select * from lose_position;
 select * from hand_consolidation;
 select * from hand_position;
+select * from log_tbl;

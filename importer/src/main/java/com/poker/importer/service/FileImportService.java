@@ -14,7 +14,6 @@ import org.postgresql.jdbc.PgConnection;
 import org.springframework.stereotype.Service;
 
 import javax.sql.DataSource;
-import javax.transaction.Transactional;
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
@@ -170,7 +169,7 @@ public class FileImportService {
         return LocalDateTime.of(year,month,day, hour, min, sec);
     }
 
-    @Transactional
+    //@Transactional
     public Optional<Long> persistData(@NonNull final List<PokerLine> listOfPokerLines) {
         long start = System.currentTimeMillis();
 
@@ -183,12 +182,17 @@ public class FileImportService {
             return Optional.empty();
         } else {
 
-            //save lines
-            saveLines(listOfPokerLinesToInsert);
-            //hand consolidation
-            pokerLineRepository.insertHandConsolidation(listOfPokerLines.get(0).getFilename());
-            //hand position
-            pokerLineRepository.insertHandPosition(listOfPokerLines.get(0).getFilename());
+            try {
+                //save lines
+                saveLines(listOfPokerLinesToInsert);
+                //hand consolidation
+                pokerLineRepository.insertHandConsolidation(listOfPokerLines.get(0).getFilename());
+                //hand position
+                pokerLineRepository.insertHandPosition(listOfPokerLines.get(0).getFilename());
+            } catch (Exception e) {
+                log.error("{}: ERROR {}", listOfPokerLines.get(0).getFilename(), e.getMessage());
+                throw e;
+            }
 
             long end = System.currentTimeMillis();
             log.info("{}: Persisted {} ms", listOfPokerLines.get(0).getFilename(), (end - start));

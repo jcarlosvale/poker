@@ -9,6 +9,7 @@ truncate table win_position;
 truncate table lose_position;
 truncate table hand_consolidation;
 truncate table hand_position;
+truncate table log_tbl;
 truncate table player_position cascade ;
 truncate table players cascade;
 truncate table hands cascade ;

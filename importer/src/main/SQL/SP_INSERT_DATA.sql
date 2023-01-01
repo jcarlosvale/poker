@@ -157,20 +157,20 @@ as $$
                     roundOf = null;
                     noBet = false;
 
-                    if strpos(new.line, 'folded before Flop')  > 0 then
+                    if (strpos(new.line, 'folded before Flop')  > 0) then
                         roundOf = 'PREFLOP';
                     end if;
-                    if strpos(new.line, 'folded on the Flop') then
+                    if (strpos(new.line, 'folded on the Flop') > 0) then
                         roundOf = 'FLOP';
                     end if;
-                    if strpos(new.line, 'folded on the Turn')  > 0 then
+                    if (strpos(new.line, 'folded on the Turn')  > 0) then
                         roundOf = 'TURN';
                     end if;
-                    if strpos(new.line, 'folded on the River') > 0 then
+                    if (strpos(new.line, 'folded on the River') > 0) then
                         roundOf = 'RIVER';
                     end if;
 
-                    if strpos(new.line, 'didn''t bet')  > 0 then
+                    if (strpos(new.line, 'didn''t bet')  > 0) then
                         noBet = true;
                     end if;
 
@@ -227,5 +227,9 @@ as $$
                                                                       ON CONFLICT (tournament_id) do nothing;
 
         return new;
+
+        EXCEPTION WHEN others THEN  -- or be more specific
+            INSERT INTO LOG_TBL VALUES (NEW.filename, NEW.line, new.line_number, SQLERRM, now());
+            return null;
     end
 $$

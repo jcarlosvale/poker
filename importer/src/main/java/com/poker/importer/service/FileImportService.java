@@ -14,6 +14,7 @@ import org.postgresql.jdbc.PgConnection;
 import org.springframework.stereotype.Service;
 
 import javax.sql.DataSource;
+import javax.transaction.Transactional;
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
@@ -169,7 +170,7 @@ public class FileImportService {
         return LocalDateTime.of(year,month,day, hour, min, sec);
     }
 
-    //@Transactional
+    @Transactional
     public Optional<Long> persistData(@NonNull final List<PokerLine> listOfPokerLines) {
         long start = System.currentTimeMillis();
 
@@ -183,6 +184,8 @@ public class FileImportService {
         } else {
 
             try {
+                // tournament
+                pokerLineRepository.insertTournament(listOfPokerLines.get(0).getTournamentId(), listOfPokerLines.get(0).getFilename());
                 //save lines
                 saveLines(listOfPokerLinesToInsert);
                 //hand consolidation

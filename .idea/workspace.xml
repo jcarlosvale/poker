@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d3d2313-248a-48e7-9b03-ec8a2574b69d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/importer/src/main/SQL/15-log_tbl.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/importer/src/main/SQL/103-SP_INSERT_TOURNAMENT.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/98-selects.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/98-selects.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/99-truncate.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/99-truncate.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/SP_INSERT_DATA.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/SP_INSERT_DATA.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/SP_HAND_CONSOLIDATION.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/101-SP_HAND_CONSOLIDATION.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/SP_HAND_POSITION.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/102-SP_HAND_POSITION.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/SP_INSERT_DATA.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/100-SP_INSERT_DATA.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/importer/src/main/java/com/poker/importer/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/java/com/poker/importer/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/importer/src/main/java/com/poker/importer/repository/PokerLineRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/java/com/poker/importer/repository/PokerLineRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/importer/src/main/java/com/poker/importer/service/FileImportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/java/com/poker/importer/service/FileImportService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -164,7 +167,7 @@
       <updated>1672350295269</updated>
       <workItem from="1672350296959" duration="71000" />
       <workItem from="1672350371996" duration="50967000" />
-      <workItem from="1672576174225" duration="11481000" />
+      <workItem from="1672576174225" duration="12706000" />
     </task>
     <task id="LOCAL-00001" summary="initial push">
       <created>1672416771481</created>
@@ -250,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672591681042</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="fixing and exception handling">
+      <created>1672595285479</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1672595285479</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,30 +279,36 @@
     <MESSAGE value="renaming functionInsertData.sql" />
     <MESSAGE value="lose positions and hand consolidation" />
     <MESSAGE value="hand position" />
-    <option name="LAST_COMMIT_MESSAGE" value="hand position" />
+    <MESSAGE value="fixing and exception handling" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing and exception handling" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/importer/src/main/java/com/poker/importer/service/FileImportService.java</url>
-          <line>186</line>
+          <line>189</line>
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/importer/src/main/java/com/poker/importer/service/FileImportService.java</url>
-          <line>188</line>
+          <line>191</line>
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/importer/src/main/java/com/poker/importer/service/FileImportService.java</url>
-          <line>190</line>
+          <line>193</line>
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/importer/src/main/java/com/poker/importer/service/FileImportService.java</url>
-          <line>175</line>
+          <line>176</line>
           <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/importer/src/main/java/com/poker/importer/service/FileImportService.java</url>
+          <line>187</line>
+          <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="OracleBreakpointType">
           <url>dbSrc:///60df32dc/add8449e-e57c-4fa2-9e65-a5a0b9a7f9e8/database/poker/schema/public/routine/insertdata@().sql</url>

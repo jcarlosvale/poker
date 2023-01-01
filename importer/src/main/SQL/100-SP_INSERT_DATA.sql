@@ -222,14 +222,10 @@ as $$
             end if;
         end if;
 
-        --tournament id
-        INSERT INTO tournaments(tournament_id, file_name, created_at) VALUES (new.tournament_id, new.filename, now())
-                                                                      ON CONFLICT (tournament_id) do nothing;
-
         return new;
 
-        EXCEPTION WHEN others THEN  -- or be more specific
+/*        EXCEPTION WHEN others THEN  -- or be more specific
             INSERT INTO LOG_TBL VALUES (NEW.filename, NEW.line, new.line_number, SQLERRM, now());
-            return null;
+            return null;*/
     end
 $$

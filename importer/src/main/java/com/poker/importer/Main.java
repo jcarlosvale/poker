@@ -23,8 +23,8 @@ public class Main implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        //String folder = "C:\\Users\\jcarlos\\AppData\\Local\\PokerStars\\HandHistory";
-        String folder = "C:\\temp";
+        String folder = "C:\\Users\\jcarlos\\AppData\\Local\\PokerStars\\HandHistory";
+        //String folder = "C:\\temp";
         if (args.length > 0) {
             folder = args[0];
         }

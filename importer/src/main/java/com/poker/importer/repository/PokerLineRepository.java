@@ -30,4 +30,10 @@ public interface PokerLineRepository extends JpaRepository<PokerLine, Long> {
     @Transactional
     @Modifying(clearAutomatically = true)
     void insertHandPosition(@Param("filename") String filename);
+
+    String CALL_PROCEDURE_INSERT_TOURNAMENT = "call insertTournament(:tournamentId, :filename);";
+    @Query(value = CALL_PROCEDURE_INSERT_TOURNAMENT, nativeQuery = true)
+    @Transactional
+    @Modifying(clearAutomatically = true)
+    void insertTournament(@Param("tournamentId") Long tournamentId, @Param("filename") String filename);
 }

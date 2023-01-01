@@ -1,0 +1,32 @@
+DROP TABLE IF EXISTS public.hand_consolidation;
+
+CREATE TABLE public.hand_consolidation (
+                                           hand_id bigint NOT NULL,
+                                           position int NOT NULL,
+                                           big_blind int NOT NULL,
+                                           board varchar NULL,
+                                           card1 char(1) NULL,
+                                           card2 char(1) NULL,
+                                           cards_description varchar(5) NULL,
+                                           chen int NULL,
+                                           fold_round varchar NULL,
+                                           level varchar(20) NOT NULL,
+                                           lose_hand_description varchar NULL,
+                                           nickname varchar NOT NULL,
+                                           no_bet bool NULL,
+                                           normalised varchar(3) NULL,
+                                           number_of_players int NULL,
+                                           pair bool NULL,
+                                           place varchar(20) NULL,
+                                           played_at timestamp NOT NULL,
+                                           small_blind int NOT NULL,
+                                           stack_of_player int NULL,
+                                           suited bool NULL,
+                                           table_id int NOT NULL,
+                                           total_pot int NOT NULL,
+                                           tournament_id bigint NOT NULL,
+                                           win_hand_description varchar NULL,
+                                           win_pot int NULL,
+                                           win_showdown bool NULL,
+                                           CONSTRAINT PKHandConsolidation PRIMARY KEY (hand_id, position)
+);

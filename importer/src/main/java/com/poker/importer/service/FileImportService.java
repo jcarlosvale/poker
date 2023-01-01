@@ -182,6 +182,8 @@ public class FileImportService {
         } else {
             //save lines
             saveLines(listOfPokerLinesToInsert);
+            //hand consolidation
+            pokerLineRepository.insertHandConsolidation(listOfPokerLines.get(0).getFilename());
             long end = System.currentTimeMillis();
             log.info("{}: Persisted {} ms", listOfPokerLines.get(0).getFilename(), (end - start));
 

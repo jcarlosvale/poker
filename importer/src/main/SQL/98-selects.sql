@@ -8,3 +8,5 @@ select * from cards_of_player;
 select * from blind_position;
 select * from fold_position;
 select * from win_position;
+select * from lose_position;
+select * from hand_consolidation;

@@ -57,7 +57,7 @@ as $$
                 bigBlind = cast(trim(substring(new.line from '/([0-9]*)\)')) as int);
                 playedAt = to_timestamp((regexp_matches(new.line, '[0-9]{4}/[0-9]{1,2}/[0-9]{1,2} [0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2}'))[1], 'YYYY/MM/DD HH24:MI:SS');
 
-                INSERT INTO hands(hand_id, table_id, level_tournament, small_blind, big_blind, created_at, played_at, tournament_id)
+                INSERT INTO hands(hand_id, table_id, level, small_blind, big_blind, created_at, played_at, tournament_id)
                 VALUES(new.hand_id, new.table_id, levelOf, smallBlind, bigBlind, now(), playedAt, new.tournament_id)
                 ON CONFLICT (hand_id)
                 do nothing;
@@ -206,7 +206,18 @@ as $$
 
                 end if;
 
+                -- lose_position
+                if (new.line like '%and lost %') then
 
+                    positionOf = cast(substring(new.line from 'Seat ([0-9]*):') as int);
+                    handDescription = trim(substring(new.line from 'and lost with (.*)'));
+
+                    INSERT INTO lose_position (hand, position, hand_description)
+                    VALUES (new.hand_id, positionOf, handDescription)
+                    on conflict(hand, position)
+                    do nothing;
+
+                end if;
 
             end if;
         end if;

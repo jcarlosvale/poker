@@ -5,14 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d3d2313-248a-48e7-9b03-ec8a2574b69d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/importer/src/main/SQL/103-SP_INSERT_TOURNAMENT.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/importer/src/main/SQL/16-IDX_NICKNAME.SQL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/importer/src/main/SQL/17-IDX_HAND_ID.SQL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/importer/src/main/SQL/TBL_CONSOLIDATION.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/importer/src/main/SQL/TBL_POKERLINE.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/importer/src/main/SQL/backup/100-SP_INSERT_DATA.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/importer/src/main/SQL/backup/tr_insertPokerLine.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/SP_HAND_CONSOLIDATION.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/101-SP_HAND_CONSOLIDATION.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/SP_HAND_POSITION.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/102-SP_HAND_POSITION.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/SP_INSERT_DATA.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/100-SP_INSERT_DATA.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/1-player.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/backup/1-player.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/10-fold_position.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/backup/10-fold_position.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/100-SP_INSERT_DATA.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/SP_INSERT_POKERLINE.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/101-SP_HAND_CONSOLIDATION.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/backup/101-SP_HAND_CONSOLIDATION.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/102-SP_HAND_POSITION.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/backup/102-SP_HAND_POSITION.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/103-SP_INSERT_TOURNAMENT.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/backup/103-SP_INSERT_TOURNAMENT.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/11-win_position.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/backup/11-win_position.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/12-lose_position.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/backup/12-lose_position.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/13-hand_consolidation.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/backup/13-hand_consolidation.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/14-hand_position.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/backup/14-hand_position.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/2-tournament.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/backup/2-tournament.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/3-hands.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/backup/3-hands.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/4-board_of_hand.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/backup/4-board_of_hand.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/5-pot_of_hand.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/backup/5-pot_of_hand.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/6-player_position.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/backup/6-player_position.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/8-cards_of_player.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/backup/8-cards_of_player.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/9-blind_position.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/backup/9-blind_position.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/pokerline.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/backup/pokerline.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/tr_insertPokerLine.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/TRIGGER_INSERT_POKERLINE.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/importer/src/main/java/com/poker/importer/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/java/com/poker/importer/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/importer/src/main/java/com/poker/importer/repository/PokerLineRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/java/com/poker/importer/repository/PokerLineRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/importer/src/main/java/com/poker/importer/model/PokerLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/java/com/poker/importer/model/PokerLine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/importer/src/main/java/com/poker/importer/service/FileImportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/java/com/poker/importer/service/FileImportService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,7 +51,13 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/../pokerReader" value="Database" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -50,36 +76,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "18",
-    "last_directory_selection": "C:/Projects/Poker/importer/src/main/java",
-    "last_opened_file_path": "C:/Projects/Poker/importer/src/main/SQL",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "editor.preferences.import",
-    "spring.configuration.checksum": "c58af0bcf0233d7eccbedb9183d47ccb"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;18&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Projects/Poker/importer/src/main/java&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Projects/Poker/importer/src/main/SQL&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.import&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;c58af0bcf0233d7eccbedb9183d47ccb&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ],
-    "RunConfigurationTargetLRU": [
-      "add8449e-e57c-4fa2-9e65-a5a0b9a7f9e8/database/\"poker\"",
-      "add8449e-e57c-4fa2-9e65-a5a0b9a7f9e8"
+    &quot;RunConfigurationTargetLRU&quot;: [
+      &quot;add8449e-e57c-4fa2-9e65-a5a0b9a7f9e8/database/\&quot;poker\&quot;&quot;,
+      &quot;add8449e-e57c-4fa2-9e65-a5a0b9a7f9e8&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.poker.importer.service" />
@@ -89,13 +115,16 @@
       <recent name="C:\Projects\Poker\importer\src\main\SQL" />
       <recent name="C:\Projects\Poker\importer\src\main\resources" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Projects\Poker\importer\src\main\SQL\backup" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.poker.importer.repository" />
       <recent name="com.poker.importer.util" />
       <recent name="com.poker.importer.model" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Spring Boot.Main">
     <configuration name="CardsGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.poker.reader.domain.util.CardsGenerator" />
       <module name="reader" />
@@ -167,7 +196,9 @@
       <updated>1672350295269</updated>
       <workItem from="1672350296959" duration="71000" />
       <workItem from="1672350371996" duration="50967000" />
-      <workItem from="1672576174225" duration="12706000" />
+      <workItem from="1672576174225" duration="14335000" />
+      <workItem from="1672692562676" duration="15000" />
+      <workItem from="1673100744231" duration="24816000" />
     </task>
     <task id="LOCAL-00001" summary="initial push">
       <created>1672416771481</created>
@@ -260,7 +291,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672595285479</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="final batch load">
+      <created>1672596474759</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1672596474759</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,35 +318,16 @@
     <MESSAGE value="lose positions and hand consolidation" />
     <MESSAGE value="hand position" />
     <MESSAGE value="fixing and exception handling" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixing and exception handling" />
+    <MESSAGE value="final batch load" />
+    <option name="LAST_COMMIT_MESSAGE" value="final batch load" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/importer/src/main/java/com/poker/importer/service/FileImportService.java</url>
-          <line>189</line>
+          <line>199</line>
           <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/importer/src/main/java/com/poker/importer/service/FileImportService.java</url>
-          <line>191</line>
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/importer/src/main/java/com/poker/importer/service/FileImportService.java</url>
-          <line>193</line>
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/importer/src/main/java/com/poker/importer/service/FileImportService.java</url>
-          <line>176</line>
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/importer/src/main/java/com/poker/importer/service/FileImportService.java</url>
-          <line>187</line>
-          <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="OracleBreakpointType">
           <url>dbSrc:///60df32dc/add8449e-e57c-4fa2-9e65-a5a0b9a7f9e8/database/poker/schema/public/routine/insertdata@().sql</url>

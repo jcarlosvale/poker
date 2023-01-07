@@ -40,6 +40,15 @@ public class PokerLine implements Serializable {
     private LocalDateTime playedAt;
 
     @NotNull
+    private String tournamentLevel;
+
+    @NotNull
+    private Integer bigBlind;
+
+    @NotNull
+    private Integer smallBlind;
+
+    @NotNull
     @Size(max = 50)
     private String section;
 

@@ -113,6 +113,9 @@ public class FileImportService {
         Integer tableId = null;
         long lineNumber = 1L;
         LocalDateTime playedAt = null;
+        String tournamentLevel = null;
+        Integer bigBlind = null;
+        Integer smallBlind = null;
 
         for(int i = 0; i < normalisedLines.size(); i++) {
             String line = normalisedLines.get(i);
@@ -122,6 +125,10 @@ public class FileImportService {
                 tournamentId = Long.valueOf(StringUtils.substringBetween(line, ": Tournament #", ", ").trim());
                 String strDateTime = StringUtils.substringBetween(line, "[", "]").trim();
                 playedAt = toLocalDateTime(strDateTime);
+
+                tournamentLevel = StringUtils.substringBetween(line, "- Level ", " (").trim();
+                smallBlind = Integer.valueOf(StringUtils.substringBetween(line," (",  "/").trim());
+                bigBlind = Integer.valueOf(StringUtils.substringBetween(line,"/",  ")").trim());
 
                 //GET TABLE ID NEXT LINE
                 String tableLine = normalisedLines.get(i+1);
@@ -144,6 +151,9 @@ public class FileImportService {
                             .handId(handId)
                             .tableId(tableId)
                             .playedAt(playedAt)
+                            .tournamentLevel(tournamentLevel)
+                            .smallBlind(smallBlind)
+                            .bigBlind(bigBlind)
                             .section(currentSection.name())
                             .line(line)
                             .filename(filename)
@@ -185,13 +195,13 @@ public class FileImportService {
 
             try {
                 // tournament
-                pokerLineRepository.insertTournament(listOfPokerLines.get(0).getTournamentId(), listOfPokerLines.get(0).getFilename());
+        //        pokerLineRepository.insertTournament(listOfPokerLines.get(0).getTournamentId(), listOfPokerLines.get(0).getFilename());
                 //save lines
                 saveLines(listOfPokerLinesToInsert);
                 //hand consolidation
-                pokerLineRepository.insertHandConsolidation(listOfPokerLines.get(0).getFilename());
+          //      pokerLineRepository.insertHandConsolidation(listOfPokerLines.get(0).getFilename());
                 //hand position
-                pokerLineRepository.insertHandPosition(listOfPokerLines.get(0).getFilename());
+          //      pokerLineRepository.insertHandPosition(listOfPokerLines.get(0).getFilename());
             } catch (Exception e) {
                 log.error("{}: ERROR {}", listOfPokerLines.get(0).getFilename(), e.getMessage());
                 throw e;
@@ -228,7 +238,7 @@ public class FileImportService {
 
         try {
 
-            final String COPY = "COPY pokerline (tournament_id, line_number, played_at, section, line, table_id, hand_id, filename)"
+            final String COPY = "COPY pokerline (tournament_id, line_number, played_at, tournament_level, big_blind, small_blind, section, line, table_id, hand_id, filename)"
                     + " FROM STDIN WITH (FORMAT TEXT, ENCODING 'UTF-8', DELIMITER '\t',"
                     + " HEADER false)";
 
@@ -241,6 +251,9 @@ public class FileImportService {
                 sb.append(pokerLine.getTournamentId()).append("\t");
                 sb.append(pokerLine.getLineNumber()).append("\t");
                 sb.append(pokerLine.getPlayedAt()).append("\t");
+                sb.append(pokerLine.getTournamentLevel()).append("\t");
+                sb.append(pokerLine.getBigBlind()).append("\t");
+                sb.append(pokerLine.getSmallBlind()).append("\t");
                 sb.append(pokerLine.getSection()).append("\t");
                 sb.append(pokerLine.getLine()).append("\t");
                 sb.append(pokerLine.getTableId()).append("\t");

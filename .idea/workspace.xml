@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9d3d2313-248a-48e7-9b03-ec8a2574b69d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/04-TBL_CONSOLIDATION.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/04-TBL_CONSOLIDATION.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/05-TBL_AGGREGATION.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/05-TBL_AGGREGATION.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/10-SP_INSERT_CONSOLIDATION.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/10-SP_INSERT_CONSOLIDATION.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/13-SP_UPDATE_AGGREGATION_PLACE.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/13-SP_UPDATE_AGGREGATION_PLACE.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/14-SP_UPDATE_AGGREGATION_HANDS.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/14-SP_UPDATE_AGGREGATION_HANDS.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +173,7 @@
       <workItem from="1672350371996" duration="50967000" />
       <workItem from="1672576174225" duration="14335000" />
       <workItem from="1672692562676" duration="15000" />
-      <workItem from="1673100744231" duration="41169000" />
+      <workItem from="1673100744231" duration="42220000" />
     </task>
     <task id="LOCAL-00001" summary="initial push">
       <created>1672416771481</created>
@@ -289,7 +287,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673146670427</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="fixing fields from CONSOLIDATION">
+      <created>1673194737575</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1673194737575</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,7 +317,8 @@
     <MESSAGE value="final batch load" />
     <MESSAGE value="initial CONSOLIDATION approach" />
     <MESSAGE value="scripts refactor and AGGREGATION TABLE" />
-    <option name="LAST_COMMIT_MESSAGE" value="scripts refactor and AGGREGATION TABLE" />
+    <MESSAGE value="fixing fields from CONSOLIDATION" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing fields from CONSOLIDATION" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

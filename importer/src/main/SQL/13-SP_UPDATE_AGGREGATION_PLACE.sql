@@ -13,7 +13,7 @@ as $$
         UPDATE aggregation
         SET
             qty_in_action =  case when new.player_in_action then qty_in_action + 1 else qty_in_action end,
-            avg_in_action =  case when new.player_no_bet then (qty_in_action + 1.0) / aggregation.qty_hands else avg_in_action end
+            avg_in_action =  case when new.player_in_action then (qty_in_action + 1.0) / aggregation.qty_hands else avg_in_action end
         WHERE
                 nickname = new.nickname;
 

@@ -9,7 +9,7 @@ as $$
         UPDATE aggregation
         SET
             avg_shows = qty_shows / new.qty_hands::decimal,
-            avg_no_bet = qty_no_bet / new.qty_hands::decimal,
+            avg_in_action = qty_in_action / new.qty_hands::decimal,
             avg_fold_preflop = qty_fold_preflop / new.qty_hands::decimal,
             avg_fold_flop = qty_fold_flop / new.qty_hands::decimal,
             avg_fold_turn = qty_fold_turn / new.qty_hands::decimal,

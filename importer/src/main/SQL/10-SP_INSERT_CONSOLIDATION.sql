@@ -1,4 +1,4 @@
-create or replace function SP_INSERT_POKERLINE() returns trigger
+create or replace function SP_INSERT_CONSOLIDATION() returns trigger
 language plpgsql
 as $$
 

@@ -53,3 +53,15 @@ CREATE TABLE PUBLIC.CONSOLIDATION (
 
     CONSTRAINT PK_CONSOLIDATION PRIMARY KEY (id)
 );
+
+CREATE INDEX idx_nickname_consolidation
+    on CONSOLIDATION(nickname);
+
+CREATE INDEX idx_hand_id_consolidation
+    on CONSOLIDATION(hand_id);
+
+CREATE INDEX idx_tournament_id_consolidation
+    on CONSOLIDATION(tournament_id);
+
+CREATE INDEX idx_filename_consolidation
+    on CONSOLIDATION(file_name);

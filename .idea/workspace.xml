@@ -5,28 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d3d2313-248a-48e7-9b03-ec8a2574b69d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/importer/src/main/SQL/05-TBL_AGGREGATION.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/importer/src/main/SQL/11-SP_INSERT_AGGREGATION.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/importer/src/main/SQL/12-SP_UPDATE_AGGREGATION_CARDS.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/importer/src/main/SQL/13-SP_UPDATE_AGGREGATION_PLACE.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/importer/src/main/SQL/14-SP_UPDATE_AGGREGATION_HANDS.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/importer/src/main/SQL/21-TRIGGER_INSERT_CONSOLIDATION.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/importer/src/main/SQL/22-TRIGGER_UPDATE_CONSOLIDATION_CARDS.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/importer/src/main/SQL/23-TRIGGER_UPDATE_CONSOLIDATION_PLACE.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/importer/src/main/SQL/24-TRIGGER_UPDATE_AGGREGATION_HANDS.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/importer/src/main/SQL/backup/98-selects.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/importer/src/main/SQL/backup/99-truncate.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/15-log_tbl.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/02-TBL_LOG.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/16-IDX_NICKNAME.SQL" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/17-IDX_HAND_ID.SQL" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/7-card.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/01-TBL_CARDS.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/98-selects.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/98-selects.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/99-truncate.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/99-truncate.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/SP_INSERT_POKERLINE.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/10-SP_INSERT_CONSOLIDATION.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/TBL_CONSOLIDATION.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/04-TBL_CONSOLIDATION.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/TBL_POKERLINE.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/03-TBL_POKERLINE.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/TRIGGER_INSERT_POKERLINE.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/20-TRIGGER_INSERT_POKERLINE.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/04-TBL_CONSOLIDATION.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/04-TBL_CONSOLIDATION.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/05-TBL_AGGREGATION.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/05-TBL_AGGREGATION.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/10-SP_INSERT_CONSOLIDATION.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/10-SP_INSERT_CONSOLIDATION.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/importer/src/main/SQL/13-SP_UPDATE_AGGREGATION_PLACE.sql" beforeDir="false" afterPath="$PROJECT_DIR$/importer/src/main/SQL/13-SP_UPDATE_AGGREGATION_PLACE.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +175,7 @@
       <workItem from="1672350371996" duration="50967000" />
       <workItem from="1672576174225" duration="14335000" />
       <workItem from="1672692562676" duration="15000" />
-      <workItem from="1673100744231" duration="37569000" />
+      <workItem from="1673100744231" duration="41169000" />
     </task>
     <task id="LOCAL-00001" summary="initial push">
       <created>1672416771481</created>
@@ -299,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673127389124</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="scripts refactor and AGGREGATION TABLE">
+      <created>1673146670427</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1673146670427</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,7 +311,8 @@
     <MESSAGE value="fixing and exception handling" />
     <MESSAGE value="final batch load" />
     <MESSAGE value="initial CONSOLIDATION approach" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial CONSOLIDATION approach" />
+    <MESSAGE value="scripts refactor and AGGREGATION TABLE" />
+    <option name="LAST_COMMIT_MESSAGE" value="scripts refactor and AGGREGATION TABLE" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

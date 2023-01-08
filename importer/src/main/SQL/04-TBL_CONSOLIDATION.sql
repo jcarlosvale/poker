@@ -18,14 +18,16 @@ CREATE TABLE PUBLIC.CONSOLIDATION (
     number_of_players int DEFAULT 0, --'HEADER' '%Seat %:%in chips%'
     positions varchar(50) DEFAULT '', --'HEADER' '%Seat %:%in chips%'
 
-    total_pot int, --'SUMMARY' '%Total pot%'
-    win_pot int,  -- 'SUMMARY' '%Seat %:%' '%collected%' '%and won %'
-    win_showdown bool, -- 'SUMMARY' '%Seat %:%' '%collected%' '%and won %'
     board_cards varchar, --'SUMMARY' '%Board [%]%'
+    total_pot int, --'SUMMARY' '%Total pot%'
+    winner_showdown bool, -- 'SUMMARY' '%Seat %:%' '%collected%' '%and won %'
     hand_win_description varchar,  -- 'SUMMARY' '%Seat %:%' '%collected%' '%and won %'
-    hand_lose_description varchar, -- 'SUMMARY' '%Seat %:%' '%and lost %'
 
 
+    player_showdown bool DEFAULT false, -- 'SUMMARY' '%Seat %:%' '%mucked [%' '%showed [%'
+    player_winner bool DEFAULT false,  -- 'SUMMARY' '%Seat %:%' '%collected%' '%and won %'
+    player_win_pot int,  -- 'SUMMARY' '%Seat %:%' '%collected%' '%and won %'
+    player_hand_description varchar, -- 'SUMMARY' '%Seat %:%' '%and lost %'
     player_position int, --'HEADER' '%Seat %:%in chips%'
     player_place varchar(20) CONSTRAINT CK_PLAYER_PLACE CHECK (player_place IN ('small blind', 'big blind', 'button')), -- 'SUMMARY' '%Seat %:%' '%(button)%' '%(small blind)% '%(big blind)%''
     player_stack int,  --'HEADER' '%Seat %:%in chips%'
@@ -36,11 +38,8 @@ CREATE TABLE PUBLIC.CONSOLIDATION (
     player_card_normalised varchar(3), -- 'SUMMARY' '%Seat %:%' '%mucked [%' '%showed [%'
     player_card_pair bool, -- 'SUMMARY' '%Seat %:%' '%mucked [%' '%showed [%'
     player_card_suited bool, -- 'SUMMARY' '%Seat %:%' '%mucked [%' '%showed [%'
-    player_no_bet bool, -- 'SUMMARY' '%Seat %:%' '%folded before Flop%' '%folded on the Flop%' '%folded on the Turn%' '%folded on the River%'
-    player_fold_round varchar CONSTRAINT CK_PLAYER_FOLD_ROUND CHECK (player_fold_round IN ('FLOP', 'PREFLOP', 'TURN', 'RIVER')), -- 'SUMMARY' '%Seat %:%' '%folded before Flop%' '%folded on the Flop%' '%folded on the Turn%' '%folded on the River%'
-    player_showdown bool DEFAULT false, -- 'SUMMARY' '%Seat %:%' '%mucked [%' '%showed [%'
-    player_winner bool DEFAULT false,  -- 'SUMMARY' '%Seat %:%' '%collected%' '%and won %'
-
+    player_in_action bool default true, -- 'SUMMARY' '%Seat %:%' '%folded before Flop%' '%folded on the Flop%' '%folded on the Turn%' '%folded on the River%'
+    player_fold_round varchar default 'SHOWDOWN' CONSTRAINT CK_PLAYER_FOLD_ROUND CHECK (player_fold_round IN ('FLOP', 'PREFLOP', 'TURN', 'RIVER', 'SHOWDOWN')), -- 'SUMMARY' '%Seat %:%' '%folded before Flop%' '%folded on the Flop%' '%folded on the Turn%' '%folded on the River%'
 
 
     file_name varchar, --'HEADER' '%Seat %:%in chips%'

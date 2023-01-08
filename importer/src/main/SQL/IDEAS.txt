@@ -1,0 +1,6 @@
+IDEIAS:
+- tempo medio de uma mão por quantidade de jogadores
+- quantidade media de mãos por quantidade de jogadores
+- se player no bet mas nao foldou, significa free card
+- se nao existe board cards, significa que levaram pre-flop
+- identificar quantas maos jogadas o player venceu!

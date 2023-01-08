@@ -37,7 +37,7 @@ as $$
     declare placeOf varchar(20);
 
     --fold_position
-    declare noBet bool;
+    declare inAction bool;
     declare roundOf varchar;
 
     --win position
@@ -282,9 +282,10 @@ as $$
 
                     playerPosition = cast(substring(new.line from 'Seat ([0-9]*):') as int);
                     roundOf = null;
-                    noBet = false;
+                    inAction = true;
 
                     if (strpos(new.line, 'folded before Flop')  > 0) then
+                        inAction = false;
                         roundOf = 'PREFLOP';
                     end if;
                     if (strpos(new.line, 'folded on the Flop') > 0) then
@@ -298,13 +299,13 @@ as $$
                     end if;
 
                     if (strpos(new.line, 'didn''t bet')  > 0) then
-                        noBet = true;
+                        inAction = false;
                     end if;
 
                     UPDATE CONSOLIDATION
                     SET
                         player_fold_round = roundOf,
-                        player_no_bet = noBet
+                        player_in_action = inAction
                     WHERE
                             hand_id = handId and
                             player_position = playerPosition;
@@ -337,14 +338,15 @@ as $$
 
                     UPDATE CONSOLIDATION
                     SET
-                        win_showdown = showDownOf
+                        winner_showdown = showDownOf,
+                        hand_win_description = handDescription
                     WHERE
                         hand_id = handId;
 
                     UPDATE CONSOLIDATION
                     SET
-                        win_pot = potOf,
-                        hand_win_description = handDescription,
+                        player_win_pot = potOf,
+                        player_hand_description = handDescription,
                         player_winner = true
                     WHERE
                         hand_id = handId and
@@ -366,7 +368,7 @@ as $$
 
                     UPDATE CONSOLIDATION
                     SET
-                        hand_lose_description = handDescription
+                        player_hand_description = handDescription
                     WHERE
                         hand_id = handId and
                         player_position = playerPosition;

@@ -10,8 +10,8 @@ CREATE TABLE PUBLIC.AGGREGATION
     qty_shows int default 0, -- update cards consolidation
     avg_shows decimal(5,2), -- insert consolidation, update cards consolidation
 
-    qty_no_bet int default 0, --update player fold round consolidation
-    avg_no_bet decimal(5,2), --update player fold round consolidation
+    qty_in_action int default 0, --update player fold round consolidation
+    avg_in_action decimal(5,2), --update player fold round consolidation
 
     qty_fold_preflop int default 0, --update player fold round consolidation
     avg_fold_preflop decimal(5,2), --update player fold round consolidation

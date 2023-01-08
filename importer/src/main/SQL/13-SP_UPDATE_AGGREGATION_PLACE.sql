@@ -12,8 +12,8 @@ as $$
         -- no bet
         UPDATE aggregation
         SET
-            qty_no_bet =  case when new.player_no_bet then qty_no_bet + 1 else qty_no_bet end,
-            avg_no_bet =  case when new.player_no_bet then (qty_no_bet + 1.0) / aggregation.qty_hands else avg_no_bet end
+            qty_in_action =  case when new.player_in_action then qty_in_action + 1 else qty_in_action end,
+            avg_in_action =  case when new.player_no_bet then (qty_in_action + 1.0) / aggregation.qty_hands else avg_in_action end
         WHERE
                 nickname = new.nickname;
 
